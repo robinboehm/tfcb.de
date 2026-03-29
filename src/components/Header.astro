@@ -72,7 +72,30 @@
   }
 
   @media (max-width: 640px) {
-    .nav { display: none; }
+    .nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: rgba(10, 10, 10, 0.98);
+      border-bottom: 1px solid rgba(76, 175, 80, 0.2);
+      padding: 1rem 1.5rem;
+      gap: 1rem;
+    }
+    .nav.open { display: flex; }
     .nav-toggle { display: block; }
   }
 </style>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.nav');
+  toggle?.addEventListener('click', () => {
+    nav?.classList.toggle('open');
+  });
+  nav?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => nav.classList.remove('open'));
+  });
+</script>
