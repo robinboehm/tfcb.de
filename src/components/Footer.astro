@@ -1,0 +1,64 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-logo">
+      <img src="/tfcb.de/logo.png" alt="1. TFC Berlin e.V." height="40" />
+    </div>
+    <div class="footer-links">
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#mannschaften">Mannschaften</a>
+      <a href="#vorstand">Vorstand</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="/tfcb.de/impressum">Impressum</a>
+    </div>
+    <div class="footer-copy">
+      &copy; {year} 1. TFC Berlin e.V. &middot; Mitglied im
+      <a href="https://tfvb.de" target="_blank" rel="noopener">TFVB</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: #050505;
+    border-top: 1px solid rgba(76, 175, 80, 0.15);
+    padding: 3rem 0 2rem;
+  }
+
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-links a {
+    color: var(--color-text-muted-dark);
+    font-size: 0.9rem;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover {
+    color: var(--color-green);
+  }
+
+  .footer-copy {
+    color: var(--color-text-muted-dark);
+    font-size: 0.8rem;
+  }
+
+  .footer-copy a {
+    color: var(--color-green);
+  }
+</style>

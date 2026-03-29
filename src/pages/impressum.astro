@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Impressum – 1. TFC Berlin e.V." description="Impressum des 1. TFC Berlin e.V.">
+  <Header />
+  <main class="impressum-main section-dark">
+    <div class="container">
+      <h1 class="section-title">Impressum</h1>
+
+      <h2>Angaben gemäß § 5 TMG</h2>
+      <p>
+        1. TFC Berlin (1. Tischfußballclub Berlin) e.V.<br />
+        c/o Robin Böhm<br />
+        Koppenstraße 82<br />
+        10243 Berlin
+      </p>
+
+      <h2>Registereintrag</h2>
+      <p>
+        Eingetragen im Vereinsregister.<br />
+        Registergericht: Amtsgericht Berlin (Charlottenburg)<br />
+        Registernummer: VR 25451
+      </p>
+
+      <h2>Kontakt</h2>
+      <p>E-Mail: <a href="mailto:info@tfcb.de">info@tfcb.de</a></p>
+
+      <h2>Vertretungsberechtigter Vorstand</h2>
+      <p>
+        Franziska Busch (1. Vorsitzende)<br />
+        Viet Duc Hoang (2. Vorsitzender)
+      </p>
+
+      <h2>Streitschlichtung</h2>
+      <p>
+        Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
+        <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">
+          https://ec.europa.eu/consumers/odr/
+        </a>.<br />
+        Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
+        Verbraucherschlichtungsstelle teilzunehmen.
+      </p>
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .impressum-main {
+    padding-top: 6rem;
+    min-height: 80vh;
+  }
+
+  .impressum-main h2 {
+    font-size: 1.1rem;
+    color: var(--color-green);
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .impressum-main p {
+    color: rgba(255,255,255,0.8);
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+  }
+
+  .impressum-main .section-title {
+    margin-bottom: 2rem;
+  }
+</style>

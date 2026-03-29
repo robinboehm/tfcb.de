@@ -1,0 +1,95 @@
+---
+---
+
+<section id="kontakt" class="section-light">
+  <div class="container">
+    <h2 class="section-title" style="color: var(--color-text-dark)">
+      <span style="color: var(--color-green-dark)">Kontakt</span>
+    </h2>
+    <p class="section-subtitle" style="color: var(--color-text-muted-light)">
+      Fragen, Mitspielen, Mitgliedschaft — wir freuen uns von euch zu hören.
+    </p>
+
+    <div class="kontakt-grid">
+      <div class="kontakt-card">
+        <div class="kontakt-icon">✉</div>
+        <h3>E-Mail</h3>
+        <a href="mailto:info@tfcb.de">info@tfcb.de</a>
+      </div>
+
+      <div class="kontakt-card">
+        <div class="kontakt-icon">📍</div>
+        <h3>Vereinsadresse</h3>
+        <address>
+          1. TFC Berlin e.V.<br />
+          c/o Robin Böhm<br />
+          Koppenstraße 82<br />
+          10243 Berlin
+        </address>
+      </div>
+
+      <div class="kontakt-card">
+        <div class="kontakt-icon">⚖</div>
+        <h3>Registergericht</h3>
+        <p>Amtsgericht Berlin (Charlottenburg)<br />VR 25451</p>
+      </div>
+
+      <div class="kontakt-card">
+        <div class="kontakt-icon">🏓</div>
+        <h3>Verband</h3>
+        <a href="https://tfvb.de" target="_blank" rel="noopener">Tischfußballverband Berlin (TFVB)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .kontakt-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .kontakt-card {
+    background: var(--color-bg-light-2);
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: border-color 0.2s;
+  }
+
+  .kontakt-card:hover {
+    border-color: var(--color-green-dark);
+  }
+
+  .kontakt-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .kontakt-card h3 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted-light);
+    margin-bottom: 0.5rem;
+  }
+
+  .kontakt-card a,
+  .kontakt-card address,
+  .kontakt-card p {
+    color: var(--color-text-dark);
+    font-style: normal;
+    line-height: 1.7;
+    font-size: 0.95rem;
+  }
+
+  .kontakt-card a {
+    color: var(--color-green-dark);
+    font-weight: 500;
+  }
+
+  .kontakt-card a:hover {
+    color: var(--color-green);
+  }
+</style>

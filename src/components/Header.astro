@@ -1,0 +1,78 @@
+---
+---
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="#hero" class="header-logo">
+      <img src="/tfcb.de/logo.png" alt="1. TFC Berlin e.V." height="48" />
+    </a>
+    <nav class="nav">
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#mannschaften">Mannschaften</a>
+      <a href="#vorstand">Vorstand</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Menü öffnen">☰</button>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(76, 175, 80, 0.2);
+    padding: 0.75rem 0;
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .header-logo img {
+    display: block;
+    transition: opacity 0.2s;
+  }
+
+  .header-logo:hover img {
+    opacity: 0.8;
+  }
+
+  .nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .nav a {
+    color: var(--color-text-light);
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+    text-transform: uppercase;
+  }
+
+  .nav a:hover {
+    color: var(--color-green);
+  }
+
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-text-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  @media (max-width: 640px) {
+    .nav { display: none; }
+    .nav-toggle { display: block; }
+  }
+</style>

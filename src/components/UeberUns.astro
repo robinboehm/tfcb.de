@@ -1,0 +1,144 @@
+---
+---
+
+<section id="ueber-uns" class="section-dark-2">
+  <div class="container">
+    <h2 class="section-title">Über <span class="section-title-green">uns</span></h2>
+    <p class="section-subtitle">Tischfußball in Berlin seit 2006</p>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          Der <strong>1. TFC Berlin e.V.</strong> ist der älteste Tischfußballverein Berlins.
+          Seit unserer Gründung im Jahr 2006 bringen wir Spielerinnen und Spieler aus ganz
+          Berlin zusammen – von Anfängerinnen bis zu Bundesligaspielerinnen.
+        </p>
+        <p>
+          Mit aktuell <strong>13 Mannschaften</strong> in fünf Ligen – von der Landesliga
+          bis zur Kreisliga – sind wir einer der größten und aktivsten Tischfußballvereine
+          in Berlin. Wir sind Mitglied im
+          <a href="https://tfvb.de" target="_blank" rel="noopener">Tischfußballverband Berlin (TFVB)</a>.
+        </p>
+        <p>
+          Unsere Heimspiele und Trainings finden überwiegend im
+          <strong>Platzwart</strong> in Berlin-Kreuzberg statt.
+          Wir freuen uns immer über neue Mitglieder und Interessierte!
+        </p>
+        <a href="#kontakt" class="btn-link">Jetzt Kontakt aufnehmen →</a>
+      </div>
+
+      <div class="about-stats">
+        <div class="stat">
+          <span class="stat-number">2006</span>
+          <span class="stat-label">Gegründet</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">13</span>
+          <span class="stat-label">Mannschaften</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">5</span>
+          <span class="stat-label">Ligen</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">BER</span>
+          <span class="stat-label">Kreuzberg</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="heimspielort">
+      <h3>Hauptheimspielbetrieb</h3>
+      <p>
+        <strong>Platzwart</strong><br />
+        Audre-Lorde-Str. 27 (ehem. Manteuffelstr. 110)<br />
+        10997 Berlin-Kreuzberg
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    margin-bottom: 3rem;
+  }
+
+  .about-text p {
+    margin-bottom: 1.25rem;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.8;
+  }
+
+  .about-text strong {
+    color: var(--color-text-light);
+  }
+
+  .btn-link {
+    color: var(--color-green);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.2s;
+  }
+
+  .btn-link:hover {
+    color: var(--color-green-light);
+  }
+
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .stat {
+    background: rgba(76, 175, 80, 0.08);
+    border: 1px solid rgba(76, 175, 80, 0.2);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--color-green);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted-dark);
+  }
+
+  .heimspielort {
+    background: rgba(255,255,255,0.04);
+    border-left: 3px solid var(--color-green);
+    border-radius: 0 8px 8px 0;
+    padding: 1.5rem 2rem;
+  }
+
+  .heimspielort h3 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-green);
+    margin-bottom: 0.75rem;
+  }
+
+  .heimspielort p {
+    color: rgba(255,255,255,0.85);
+    line-height: 1.8;
+  }
+
+  @media (max-width: 768px) {
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  }
+</style>
