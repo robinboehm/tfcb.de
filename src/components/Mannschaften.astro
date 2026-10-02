@@ -1,45 +1,8 @@
 ---
-const ligen = [
-  {
-    name: 'Landesliga',
-    teams: [
-      { name: '1.TFC Berlin Kreuzberg 36 II', heimspielort: 'Kickerfreude', adresse: 'Siemensstraße 26, 10551 Berlin-Moabit' },
-      { name: 'BSU', heimspielort: 'Platzwart', adresse: 'Audre-Lorde-Str. 27, 10997 Berlin-Kreuzberg' },
-      { name: 'ZIGZAG Ahtag', heimspielort: 'Platzwart', adresse: 'Audre-Lorde-Str. 27, 10997 Berlin-Kreuzberg' },
-    ]
-  },
-  {
-    name: 'Verbandsliga',
-    teams: [
-      { name: 'TFC Berlin II', heimspielort: 'Platzwart', adresse: 'Audre-Lorde-Str. 27, 10997 Berlin-Kreuzberg' },
-    ]
-  },
-  {
-    name: 'Bezirksliga',
-    teams: [
-      { name: 'Flora Soft', heimspielort: 'Studentisches Café Flora', adresse: 'Philippstr. 13, 10115 Berlin' },
-      { name: 'ZIGZAG Babärz', heimspielort: 'Platzwart', adresse: 'Audre-Lorde-Str. 27, 10997 Berlin-Kreuzberg' },
-    ]
-  },
-  {
-    name: 'Kreisliga A',
-    teams: [
-      { name: 'Flora Softer', heimspielort: 'Studentisches Café Flora', adresse: 'Philippstr. 13, 10115 Berlin' },
-      { name: 'Megapeng', heimspielort: 'Pörx', adresse: 'Fürbringer Str. 29, 10961 Berlin-Kreuzberg' },
-      { name: 'Pink Unicorns', heimspielort: 'Platzwart', adresse: 'Audre-Lorde-Str. 27, 10997 Berlin-Kreuzberg' },
-      { name: 'Pli-Pla-Platzwart', heimspielort: 'Platzwart', adresse: 'Audre-Lorde-Str. 27, 10997 Berlin-Kreuzberg' },
-    ]
-  },
-  {
-    name: 'Kreisliga B',
-    teams: [
-      { name: 'Flora Kurbelkrieger', heimspielort: 'Studentisches Café Flora', adresse: 'Philippstr. 13, 10115 Berlin' },
-      { name: 'Gernhart Reinbolzen', heimspielort: 'Platzwart', adresse: 'Audre-Lorde-Str. 27, 10997 Berlin-Kreuzberg' },
-      { name: 'kick.eriki', heimspielort: 'Kickerfreude', adresse: 'Siemensstraße 26, 10551 Berlin-Moabit' },
-      { name: 'Kommando Erwin Kostedde', heimspielort: 'Platzwart', adresse: 'Audre-Lorde-Str. 27, 10997 Berlin-Kreuzberg' },
-    ]
-  },
-];
+import data from '../data/mannschaften.json';
+
+const { saison, ligen } = data;
+const anzahlTeams = ligen.reduce((n, liga) => n + liga.teams.length, 0);
 ---
 
 <section id="mannschaften" class="section-light">
@@ -48,7 +11,7 @@ const ligen = [
       Unsere <span style="color: var(--color-green-dark)">Mannschaften</span>
     </h2>
     <p class="section-subtitle" style="color: var(--color-text-muted-light)">
-      15 Teams in 5 Ligen – Saison 2026/27
+      {anzahlTeams} Teams in {ligen.length} Ligen – Saison {saison}
     </p>
 
     {ligen.map(liga => (

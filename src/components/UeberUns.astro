@@ -1,4 +1,10 @@
 ---
+import data from '../data/mannschaften.json';
+
+const anzahlTeams = data.ligen.reduce((n, liga) => n + liga.teams.length, 0);
+const zahlwoerter = ['keine', 'einer', 'zwei', 'drei', 'vier', 'fünf', 'sechs', 'sieben', 'acht', 'neun'];
+const anzahlLigen = data.ligen.length;
+const ligenText = zahlwoerter[anzahlLigen] ?? String(anzahlLigen);
 ---
 
 <section id="ueber-uns" class="section-dark-2">
@@ -14,7 +20,7 @@
           Berlin zusammen – von Anfängerinnen bis zu Bundesligaspielerinnen.
         </p>
         <p>
-          Mit aktuell <strong>15 Mannschaften</strong> in fünf Ligen – von der Landesliga
+          Mit aktuell <strong>{anzahlTeams} Mannschaften</strong> in {ligenText} Ligen – von der Landesliga
           bis zur Kreisliga – sind wir einer der größten und aktivsten Tischfußballvereine
           in Berlin. Wir sind Mitglied im
           <a href="https://tfvb.de" target="_blank" rel="noopener">Tischfußballverband Berlin (TFVB)</a>.

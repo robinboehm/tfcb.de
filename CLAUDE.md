@@ -17,6 +17,9 @@ Live unter: https://tfcb.de | Repo: git@github.com:robinboehm/tfcb.de.git
 
 ## Struktur
 - `src/components/` – Alle Sektionskomponenten (Header, Hero, UeberUns, Mannschaften, Vorstand, Kontakt, Footer)
+- `src/data/mannschaften.json` – Teams/Ligen/Heimspielorte (automatisch generiert, nicht von Hand editieren)
+- `scripts/update-mannschaften.mjs` – holt die Teams von tfvb.de (`node scripts/update-mannschaften.mjs`)
+- `.github/workflows/update-mannschaften.yml` – jährlich am 1. September: Teams aktualisieren, committen, deployen
 - `src/pages/index.astro` – Hauptseite (assembliert alle Komponenten)
 - `src/pages/impressum.astro` – Impressum (DSGVO)
 - `src/styles/global.css` – CSS-Variablen und globale Styles

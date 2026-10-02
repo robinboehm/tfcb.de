@@ -1,4 +1,7 @@
 ---
+import data from '../data/mannschaften.json';
+
+const anzahlTeams = data.ligen.reduce((n, liga) => n + liga.teams.length, 0);
 ---
 
 <section id="hero" class="hero">
@@ -7,7 +10,7 @@
     <img src="/logo.png" alt="1. TFC Berlin e.V." class="hero-logo" />
     <h1 class="hero-title">1. Tischfußballclub Berlin</h1>
     <p class="hero-subtitle">
-      Ältester Tischfußballverein Berlins &middot; Gegründet 2006 &middot; 15 Mannschaften
+      Ältester Tischfußballverein Berlins &middot; Gegründet 2006 &middot; {anzahlTeams} Mannschaften
     </p>
     <div class="hero-cta">
       <a href="#mannschaften" class="btn btn-primary">Unsere Mannschaften</a>
